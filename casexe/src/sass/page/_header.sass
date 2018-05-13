@@ -1,0 +1,150 @@
+#preloader
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: $white
+    z-index: 30
+.preloader__img-wrapper
+    position: absolute
+    top: 48%
+    left: 50%
+    transform: translateX(-50%)
+    
+.header
+    width: 100%
+    &__wrapper
+        height: 310px
+        width: 100%
+        background-color: #dcdcdc
+    &__info
+        max-width: 1000px
+        padding: 45px 10px 65px
+        margin: 0 auto
+    &__company
+        display: flex
+        flex-wrap: nowrap
+        justify-content: space-between
+        align-items: center
+    &__about
+        display: flex
+        flex-wrap: nowrap
+        align-items: center
+        margin-top: 20px
+    &__ico
+        width: 100px
+        height: 100px
+        background-color: $brown
+    &__name
+        color: $brown
+        margin-left: 12px
+    &__title
+        line-height: 24px;
+        margin-bottom: 15px
+        letter-spacing: 0.035em
+    &__contact
+        text-align: right
+        color: $brown
+    &__phones
+        font-family: 'Open Sans Condensed', sans-serif
+        font-weight: 300
+        font-size: 40px
+        line-height: 46px
+        margin-top: -16px
+        letter-spacing: 0.025em
+    &__callback
+        border-bottom: 2px dashed $brown
+        display: inline-block
+        font-size: 24px
+        font-weight: bold
+        letter-spacing: 0.025em
+        cursor: pointer
+        &:hover
+            color: $dbrown
+            border-color: $dbrown
+    & .nav
+        background-color: $brown
+        height: 80px
+        width: 100%
+        color: $white
+        padding: 22px 44px 25px
+        position: relative
+        & .menu
+            display: flex
+            justify-content: space-between
+            max-width: 1000px
+            padding: 0 39px
+            margin: 0 auto
+            font-size: 30px
+            line-height: 30px
+            &__link
+                display: inline-block
+                text-align: center
+                padding: 0 25px
+                border-right: 2px solid $white
+                &:first-child
+                    padding-left: 0
+                &:last-child
+                    padding-right: 0
+                    border-right: none
+                &:hover a
+                    border-bottom: 2px solid $white
+            &--min
+                display: none
+                position: absolute
+                padding: 5px 8px
+                z-index: 2
+                background-color: $brown
+                font-size: 24px
+                line-height: 24px
+                list-style-type: none
+                &__btn
+                    width: 60px
+                    height: 60px
+                    border: 2px solid $white
+                    border-radius: 50%
+                    margin-top: -12px
+                    cursor: pointer
+                    display: none
+                    & .row
+                        width: 40px
+                        height: 2px
+                        background-color: $white
+                        transition: all 1s
+                        margin-top: 22%
+                        margin-left: 8px
+                        &__top.active
+                            transform: translateY(15px) rotate(45deg)
+                        &__bot.active
+                            transform: translateY(-15px) rotate(-45deg)
+                        &__mid.active
+                            transform: translateY(0px) rotate(-225deg)
+                        
+                &__link
+                    margin-bottom: 5px
+                    &:hover
+                        transform: translateX(5px)
+                    &:hover a
+                        border-bottom: 1px solid $white
+    &__slider
+        & img
+            margin: 0 auto
+        & .slick-prev
+            left: 25%
+            top: 46.5%
+            background-color: $white
+            background-image: url(../img/prev-btn.jpg)
+            width: 32px
+            height: 61px
+            &:hover
+                opacity: .5
+        & .slick-next
+            right: 23.5%
+            top: 46.5%
+            background-color: $white
+            background-image: url(../img/next-btn.jpg)
+            width: 32px
+            height: 61px
+            &:hover
+                opacity: .5

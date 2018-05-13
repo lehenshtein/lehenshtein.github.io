@@ -1,0 +1,1 @@
+//=require libs/slick.min.js

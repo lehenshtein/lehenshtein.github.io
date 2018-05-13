@@ -1,0 +1,156 @@
+.all-in
+    max-width: 1000px
+    padding: 0 10px
+    margin: 0 auto
+.site-map
+    margin-bottom: 20px
+    width: 100%
+    &__nav
+        color: $brown
+        font-size: 14px
+        padding: 6px 0
+    &__link
+        display: inline-block
+        & a
+            text-decoration: underline
+        &:hover 
+            color: $dbrown
+        &:last-child a
+            text-decoration: none
+        &:last-child:after
+            content: ''
+        &::after
+            content: '\00A0 \00A0 / \00A0'
+.justifyer
+    display: flex
+    flex-wrap: nowrap
+.side-menu-wrapper
+    min-width: 200px
+    max-width: 200px
+.side-menu
+    list-style-type: none
+    font-size: 18px
+    color: $brown
+    margin-top: -10px
+    &__link
+        line-height: 30px
+        &:hover
+            color: $dbrown
+            &>a
+                text-decoration: underline
+            & .side-menu__in > li
+                height: 22px
+                opacity: 1
+                pointer-events: auto
+                
+
+    &__in
+        font-size: 14px
+        list-style-type: none
+        margin-left: 16px
+        transition: all 2s
+        & li
+            position: relative
+            line-height: 22px
+            transition-delay: .4s
+            padding-left: 2px 
+            height: 0
+            opacity: 0
+            pointer-events: none
+            &:hover
+                color: $dbrown
+                text-decoration: underline
+            &::before
+                position: absolute
+                content: '\2022'
+                left: -8px
+    &__price-list
+        margin-top: 105px
+        margin-left: -15px
+        text-align: center
+        & a
+            font-size: 30px
+            font-weight: bold
+            color: $litdark
+            display: inline-block
+            margin-top: -12px
+            letter-spacing: 0.02em
+.content-wrapper
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+.product-card
+    display: inline-block
+    position: relative
+    padding: 20px
+    width: 250px
+    height: 380px
+    background-color: $light
+    margin-right: 15px
+    margin-bottom: 20px
+    &:nth-child(3n)
+        margin-right: 0
+    & span
+        display: inline-block
+    &__img
+        width: 210px
+        height: 210px
+        overflow: hidden
+        position: relative
+        & img
+            height: 100%
+            display: inline-block
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            right: 0
+    &__name
+        font-size: 18px
+        line-height: 18px
+        color: $brown
+        margin-top: 20px
+        letter-spacing: 0.025em
+    &__price
+        position: absolute
+        bottom: 11px
+        left: 18px
+        font-size: 28px
+        font-weight: bold
+        color: $litdark
+        letter-spacing: 0.025em
+    &__to-cart
+        position: absolute
+        right: 35px
+        bottom: 14px
+.pages
+    margin-left: 200px
+    text-align: center
+    margin-top: 10px
+    padding-bottom: 60px
+    border-bottom: 1px solid $brown
+    &__count
+        font-size: 14px
+        line-height: 22px
+        margin: 0 8px
+        display: inline-block
+        color: $brown
+        &:hover
+            color: $dbrown
+        &--active
+            color: $litdark
+            font-size: 18px
+.company-description
+    margin-left: 200px
+    height: 440px
+    &__text
+        display: inline-block
+        max-width: 370px
+        vertical-align: top
+        padding-top: 23px
+        letter-spacing: 0.022em
+        font-size: 14px
+        line-height: 22px
+        color: $brown
+        &:first-child
+            margin-right: 35px
